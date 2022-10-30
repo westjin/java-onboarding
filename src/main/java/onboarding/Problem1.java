@@ -22,7 +22,8 @@ public class Problem1 {
         crongNum = getBigNum(crong);
 
         if (pobiNum == -1 || crongNum == -1){
-            return -1;
+            answer = -1;
+            return answer;
         }
 
         if(pobiNum > crongNum){
@@ -49,11 +50,14 @@ public class Problem1 {
             mulResult *= eachNum.get(j);
         }
 
+//
+//        if (addResult > mulResult){
+//            return addResult;
+//        }
+//        else return mulResult;
 
-        if (addResult > mulResult){
-            return addResult;
-        }
-        else return mulResult;
+        return Math.max(addResult,mulResult);
+
     }
 
 
@@ -95,11 +99,12 @@ public class Problem1 {
         rightBignum = findBigNum(eachNumR);
 
 
-        if (leftBigNum > rightBignum)
-            return leftBigNum;
-
-        else return rightBignum;
-
+//        if (leftBigNum > rightBignum)
+//            return leftBigNum;
+//
+//        else return rightBignum;
+//
+        return Math.max(leftBigNum,rightBignum);
     }
 
 
