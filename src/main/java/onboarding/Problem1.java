@@ -16,10 +16,18 @@ public class Problem1 {
         //각각의 페이지 설정
         setPage(pobi);
         setPage(crong);
+
+        System.out.println("pobi : " + pobi);
+        System.out.println("crong : " + crong);
+        System.out.println();
+
+
         //각자의 큰 수 찾기
         pobiNum = getBigNum(pobi);
-
+        System.out.println("pobiNum : "+pobiNum);
         crongNum = getBigNum(crong);
+
+        System.out.println("crongNum : "+crongNum);
 
         if (pobiNum == -1 || crongNum == -1){
             answer = -1;
@@ -136,6 +144,10 @@ public class Problem1 {
 
         List<Integer> pobi = new ArrayList<Integer>(2); //pobi 배열리스트 생성
         List<Integer> crong = new ArrayList<Integer>(2); //pobi 배열리스트 생성
+
+//        List<Integer> pobi = List.of();
+//        List<Integer> crong = List.of();
+
 
         System.out.println(solution(pobi,crong));
 
