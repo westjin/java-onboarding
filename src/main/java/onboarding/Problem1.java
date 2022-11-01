@@ -7,6 +7,13 @@ import java.util.Random;
 
 public class Problem1 {
     public static int solution(List<Integer> pobi, List<Integer> crong) {
+        //List.of()를 이용한 배열 생성
+
+
+
+
+
+
 
         int pobiNum = 0;
         int crongNum = 0;
@@ -14,12 +21,12 @@ public class Problem1 {
         int answer = Integer.MAX_VALUE;
 
         //각각의 페이지 설정
-        setPage(pobi);
-        setPage(crong);
+        //setPage(pobi);
+        //setPage(crong);
 
-        System.out.println("pobi : " + pobi);
-        System.out.println("crong : " + crong);
-        System.out.println();
+//        System.out.println("pobi : " + pobi);
+//        System.out.println("crong : " + crong);
+//        System.out.println();
 
 
         //각자의 큰 수 찾기
@@ -118,38 +125,38 @@ public class Problem1 {
 
 
 
-    public static void setPage(List<Integer> pageOwner){
-
-        Random rd = new Random(); // 책을 임의로 펼칠 난수
-
-        pageOwner.add((rd.nextInt(400)+1)); // range : 1 ~ 400
-        if(pageOwner.get(0) % 2 == 0){ // 처음 뽑은 난수가 짝수일 경우 오른쪽 페이지로 설정해준다.
-            pageOwner.add(0, pageOwner.get(0));
-            pageOwner.remove(0);
-            pageOwner.add(0,pageOwner.get(0)-1);
-
-        } else {
-            pageOwner.add(pageOwner.get(0)+1);
-        }
-
-
-    }
-
-
+//    public static void setPage(List<Integer> pageOwner){
+//
+//        Random rd = new Random(); // 책을 임의로 펼칠 난수
+//
+//        pageOwner.add((rd.nextInt(400)+1)); // range : 1 ~ 400
+//        if(pageOwner.get(0) % 2 == 0){ // 처음 뽑은 난수가 짝수일 경우 오른쪽 페이지로 설정해준다.
+//            pageOwner.add(0, pageOwner.get(0));
+//            pageOwner.remove(0);
+//            pageOwner.add(0,pageOwner.get(0)-1);
+//
+//        } else {
+//            pageOwner.add(pageOwner.get(0)+1);
+//        }
+//
+//
+//    }
 
 
 
 
-    public static void main(String[] args){
 
-        List<Integer> pobi = new ArrayList<Integer>(2); //pobi 배열리스트 생성
-        List<Integer> crong = new ArrayList<Integer>(2); //pobi 배열리스트 생성
-
-//        List<Integer> pobi = List.of();
-//        List<Integer> crong = List.of();
-
-
-        System.out.println(solution(pobi,crong));
-
-    }
+//
+//    public static void main(String[] args){
+//
+//        List<Integer> pobi = new ArrayList<Integer>(2); //pobi 배열리스트 생성
+//        List<Integer> crong = new ArrayList<Integer>(2); //pobi 배열리스트 생성
+//
+////        List<Integer> pobi = List.of();
+////        List<Integer> crong = List.of();
+//
+//
+//        System.out.println(solution(pobi,crong));
+//
+//    }
 }
